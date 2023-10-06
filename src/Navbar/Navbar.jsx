@@ -50,7 +50,7 @@ const links =<>
 </>
 
     return (
-        <div className="navbar bg-base-100 bg-gray-100 pt-5 shadow-xl">
+        <div className="navbar bg-base-100 bg-gray-200 pt-5 shadow-xl">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -61,6 +61,7 @@ const links =<>
                     </ul>
                 </div>
                 <img className="w-[100px]" src={"https://i.ibb.co/pxx4t7p/257710628-3080374558951991-1582989214067123809-n.png"} alt="" />
+       
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
