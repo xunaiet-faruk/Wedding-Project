@@ -7,6 +7,7 @@ import Register from '../Pages/Register/Register';
 import About from '../Pages/About/About';
 import Contact from '../Pages/Contact/Contact';
 import Singledetails from '../Pages/Singlecard/Singledetails';
+import Private from '../Private/Private';
 
 const Route=createBrowserRouter([
     {
@@ -40,7 +41,7 @@ const Route=createBrowserRouter([
           },
           {
             path:'/singledetails/:id',
-            element:<Singledetails></Singledetails>,
+            element: <Private><Singledetails></Singledetails></Private>,
             loader: () => fetch('/Wedding.json')
           }
           
