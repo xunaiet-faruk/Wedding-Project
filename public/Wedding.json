@@ -1,0 +1,44 @@
+[
+    {
+        "id":1,
+        "service_name": "Enchanted Garden Venue",
+        "image":"https://i.ibb.co/Wp7VB9c/wedding-setting.jpg",
+        "price": "$5,999",
+        "description": "Experience the magic of an outdoor wedding in our enchanting garden venue, complete with fairy lights and a romantic gazebo."
+    },
+    {
+        "id": 2,
+        "service_name": "Elegant Bridal Gown Rental",
+        "image": "https://i.ibb.co/ChfMVNM/young-bride-wedding-day.jpg",
+        "price": "$799",
+        "description": "Rent the perfect bridal gown that will make you feel like royalty on your special day, without the royal price tag."
+    },
+    {
+        "id": 3,
+        "service_name": "Culinary Delights Catering",
+        "image": "https://i.ibb.co/YBpZQfX/cup-dessert-with-whipped-cream-strawberries-cherries-orange.jpg",
+        "price": "$4,499",
+        "description": "Indulge your guests with a delectable culinary experience, featuring gourmet dishes and exquisite presentation."
+    },
+    {
+        "id":4,
+        "service_name": "Captivating Photography Package",
+        "image": "https://i.ibb.co/fCb5Tnh/side-view-photographer-married-couple.jpg",
+        "price": "$2,299",
+        "description": "Capture the essence of your wedding day with a professional photography package that tells your unique love story."
+    },
+    {
+        "id": 5,
+        "service_name": "Floral Dreams Decoration",
+        "image": "https://i.ibb.co/vPhKDrG/7-10.jpg",
+        "price": "$1,499",
+        "description": "Transform your venue with breathtaking floral arrangements that add beauty, elegance, and a touch of nature to your wedding."
+    },
+    {
+        "id": 6,
+        "service_name": "Sweet Serenity Wedding Cake",
+        "image": "https://i.ibb.co/8MdydJr/wonderful-wedding-day.jpg",
+        "price": "$599",
+        "description": "Delight in a customized wedding cake that not only looks stunning but tastes divine, leaving your guests craving for more."
+    }
+]

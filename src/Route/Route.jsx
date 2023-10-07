@@ -6,6 +6,7 @@ import Login from '../Pages/Login/Login';
 import Register from '../Pages/Register/Register';
 import About from '../Pages/About/About';
 import Contact from '../Pages/Contact/Contact';
+import Singledetails from '../Pages/Singlecard/Singledetails';
 
 const Route=createBrowserRouter([
     {
@@ -14,7 +15,8 @@ const Route=createBrowserRouter([
         children:[
             {
                 path:'/',
-                element:<Home></Home>
+                element:<Home></Home>,
+                loader:() =>fetch('/Wedding.json')
             },
           {
             path:'/service',
@@ -36,6 +38,11 @@ const Route=createBrowserRouter([
             path:'/contact',
             element:<Contact></Contact>
           },
+          {
+            path:'/singledetails/:id',
+            element:<Singledetails></Singledetails>,
+            loader: () => fetch('/Wedding.json')
+          }
           
           
         ]
