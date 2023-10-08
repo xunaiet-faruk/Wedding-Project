@@ -4,10 +4,13 @@ import Home from '../Pages/Home/Home';
 import Servises from '../Pages/Servises/Servises';
 import Login from '../Pages/Login/Login';
 import Register from '../Pages/Register/Register';
-import About from '../Pages/About/About';
 import Contact from '../Pages/Contact/Contact';
 import Singledetails from '../Pages/Singlecard/Singledetails';
 import Private from '../Private/Private';
+import Procedure from '../Pages/procedure/procedure';
+import Allcards from '../Pages/Allcards/Allcards';
+import Speacial from '../Pages/Speacila/Speacial';
+
 
 const Route=createBrowserRouter([
     {
@@ -19,6 +22,7 @@ const Route=createBrowserRouter([
                 element:<Home></Home>,
                 loader:() =>fetch('/Wedding.json')
             },
+         
           {
             path:'/service',
             element:<Servises></Servises>
@@ -32,13 +36,20 @@ const Route=createBrowserRouter([
             element:<Register></Register>
           },
           {
-            path:'/about',
-            element:<About></About>
+            path:'/procedure',
+            element:<Procedure></Procedure>
           },
           {
             path:'/contact',
             element:<Contact></Contact>
           },
+          {
+
+              path:'/speacial',
+            element: <Private><Speacial></Speacial></Private>
+
+          },
+
           {
             path:'/singledetails/:id',
             element: <Private><Singledetails></Singledetails></Private>,

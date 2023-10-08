@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { Authcontext } from "../Configcontext/Context";
 
 
+
 const Navbar = () => {
     const { user, logout } = useContext(Authcontext)
 
@@ -29,26 +30,29 @@ const handleclick = () =>{
                 Home
             </NavLink>
         </li>
+
         <li>
             <NavLink
-                to="/about"
+                to="/speacial"
                 className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? "active" : "text-xl "
                 }
             >
-                About
+                Speacial
             </NavLink>
         </li>
         <li>
             <NavLink
-                to="/service"
+                to="/procedure"
                 className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "active" : "text-xl"
+                    isPending ? "pending" : isActive ? "active" : "text-xl "
                 }
             >
-                Contact
+                Procedure
             </NavLink>
         </li>
+      
+     
         <li>
             <NavLink
                 to="/contact"
@@ -56,10 +60,11 @@ const handleclick = () =>{
                     isPending ? "pending" : isActive ? "active" : "text-xl"
                 }
             >
-                Services
+                Contact
             </NavLink>
         </li>
-
+      
+       
 
     </>
 
@@ -85,13 +90,17 @@ const handleclick = () =>{
                 </ul>
             </div>
             <div className="navbar-end">
+
+                {
+                    user && <p className="mr-2">{user.displayName}</p>
+                }
                 {
 
                     user ?
                        
-
+                          
                             <button onClick={handleclick} className="btn bg-blue-200 font-bold px-8">Sign out</button>
-                      
+                     
 
                         :
 
@@ -101,6 +110,10 @@ const handleclick = () =>{
 
 
                 }
+                {
+                    user && <img className="w-12 ml-5  rounded-full h-12" src={user.photoURL}></img>
+                }
+              
             </div>
         </div>
     );

@@ -1,28 +1,39 @@
-import React from 'react';
+
+import { GiSelfLove } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
+
 
 const Allcards = ({card}) => {
     const { id, service_name, price, image, description }=card || {}
-  
+ 
+
+ 
+
+
     return (
      
         
         <div>
           
-            <div className="relative flex w-[400px] h-[600px] mt-5 flex-col rounded-xl bg-pink-50 bg-clip-border text-gray-700 shadow-md">
+            <div className="relative flex w-[400px] h-[600px] mt-5 flex-col rounded-xl bg-pink-50 shadow-xl bg-clip-border text-gray-700 ">
                 <div className="relative mx-4 mt-4 h-96 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
-                    <img
+                    <img 
                         src={image}
                         className="h-full w-full object-cover"
                     />
                 </div>
                 <div className="p-6">
                     <div className="mb-2">
-                        <p className="block font-sans font-bold text-2xl leading-relaxed text-blue-gray-900 antialiased">
+                        <p className="block  font-sans flex justify-between font-bold text-xl leading-relaxed text-blue-gray-900 antialiased">
                          {service_name}
+                            <button >  <GiSelfLove></GiSelfLove></button>
                         </p>
+
+                     
+
                         <p className="block text-2xl font-sans  font-medium leading-relaxed text-blue-gray-900 antialiased">
                             <span className='font-bold'> Price</span> : {price}
+                         
                         </p>
                     </div>
                     <p className="block font-sans text-md font-normal leading-normal text-gray-700 antialiased opacity-75">
