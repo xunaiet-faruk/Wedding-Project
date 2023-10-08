@@ -2,11 +2,11 @@ import React from 'react';
 
 const Success = () => {
     return (
-        <div>
+        <div className='max-w-screen-2xl mx-auto'>
             <h1 className='text-center text-5xl text-gray-400 mt-16 mb-10 font-bold italic '>Matrimony Service with Millions of Success Stories</h1>
         <div>
 
-                <div className="carousel w-full ">
+                <div className="carousel w-full " data-aos="zoom-out-right" data-aos-duration="1000">
                     <div id="slide1" className="carousel-item relative w-full flex gap-32 justify-center mt-12 items-center">
                        
                        <div className='bg-gray-100 shadow-2xl mb-20  p-8 rounded-lg '>

@@ -1,22 +1,24 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Authcontext } from "../../Configcontext/Context";
 import Navbar from "../../Navbar/Navbar";
 import { updateProfile } from "firebase/auth";
+import { FcGoogle } from "react-icons/fc";
 
 
 
 const Register = () => {
     const [error, seterror] = useState('')
     const [succes, setsuccess] = useState('');
-    const { createuser } = useContext(Authcontext)
+    const { createuser, Googlesign } = useContext(Authcontext)
+    const navigate = useNavigate()
     const handlesubmit = e => {
         const name = e.target.name.value
         const image = e.target.image.value
         const email = e.target.email.value
         const password = e.target.password.value;
-        const cheaked = e.target.cheaked.value;
-        console.log(name, email, password, cheaked)
+        const checked = e.target.checked.value;
+        console.log(name, email, password, checked)
         e.preventDefault()
         seterror('')
         if (password.length < 6) {
@@ -51,7 +53,22 @@ const Register = () => {
                 console.log(error)
             })
 
+            
 
+
+    }
+
+
+    const handlegoogle = () => {
+        Googlesign()
+            .then(() => {
+                navigate(location?.state ? location.state : '/')
+
+
+            })
+            .catch(error => {
+                console.log(error)
+            })
     }
 
 
@@ -94,7 +111,7 @@ const Register = () => {
                                 </label>
                                 <input type="password" placeholder="password" name="password" className="input input-bordered" required />
                                 <div className="mt-3 mb-3">
-                                    <input type="checkbox" className="mr-3 " name="cheaked" id="" />
+                                    <input type="checkbox" className="mr-3 " name="checked" id="task" />
                                     <label className="text-md" htmlFor="task">Please Accept our terms</label>
                                 </div>
                             </div>
@@ -117,6 +134,12 @@ const Register = () => {
                                 succes && <span className="text-green-600 text-bold ">{succes}</span>
                             }
                         </p>
+
+                        <div className="text-center">
+                            <button onClick={handlegoogle} className="btn boreder ml-3 text-md hover:bg-error mt-4 font-semibold">
+                                <FcGoogle className="text-2xl ml-2"> </FcGoogle>   Google
+                            </button>
+                        </div>
                         <p className="text-center mt-2">Already Have an account go to <Link className="text-green-500" to='/login'>Login</Link></p>
                     </div>
                 </div>

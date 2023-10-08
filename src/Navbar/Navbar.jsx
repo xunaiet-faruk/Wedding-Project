@@ -18,60 +18,70 @@ const handleclick = () =>{
 }
 
 
-    const links = <>
+    const links = <div className="flex gap-6 items-center">
 
-        <li>
+     
             <NavLink
                 to="/"
                 className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "active text-xl" : "text-xl "
+                    isPending ? "pending" : isActive ? "text-lg text-white font-medium bg-black py-2 px-4 lg:px-6 rounded-lg" : "text-xl "
                 }
             >
                 Home
             </NavLink>
-        </li>
+    
 
-        <li>
-            <NavLink
-                to="/speacial"
-                className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "active" : "text-xl "
-                }
-            >
-                Speacial
-            </NavLink>
-        </li>
-        <li>
-            <NavLink
-                to="/procedure"
-                className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "active" : "text-xl "
-                }
-            >
-                Procedure
-            </NavLink>
-        </li>
-      
-     
-        <li>
+       
             <NavLink
                 to="/contact"
                 className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "active" : "text-xl"
+                    isPending ? "pending" : isActive ? "text-lg text-white font-medium bg-black py-2 px-4 lg:px-6 rounded-lg" : "text-xl"
                 }
             >
                 Contact
             </NavLink>
-        </li>
+      
+      
+     
+           {user && <NavLink
+                to="/speacial"
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "text-lg text-white font-medium bg-black py-2 px-4 lg:px-6 rounded-lg" : "text-xl "
+                }
+            >
+                Special
+            </NavLink> }
+      
+      
+           {user && <NavLink
+                to="/procedure"
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "text-lg text-white font-medium bg-black py-2 px-4 lg:px-6 rounded-lg" : "text-xl "
+                }
+            >
+                Procedure
+            </NavLink>}
+      
+      
+       
+            {!user && <NavLink
+                to="/register"
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "text-lg text-white font-medium bg-black py-2 px-4 lg:px-6 rounded-lg" : "text-xl "
+                }
+            >
+                Register
+            </NavLink>}
+       
       
        
 
-    </>
+    </div>
 
 
 
     return (
-        <div className="navbar max-w-7xl mx-auto   pt-5 ">
+        <div className="navbar max-w-screen-2xl mx-auto  pt-5 ">
             <div className="navbar-start ">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">

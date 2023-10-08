@@ -1,10 +1,11 @@
 
 import { BsPeopleFill } from 'react-icons/bs';
+
 const Procedure = () => {
     return (
        <div>
 
-         <section>
+            <section className='' data-aos="zoom-out-left">
                 <div className="max-w-screen-xl mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
                     <div
                         className="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-16"
@@ -14,7 +15,6 @@ const Procedure = () => {
                         >
                             <h2 className="text-3xl font-bold sm:text-4xl"> BROWSE MATRIMONIAL
                                 PROFILES</h2>
-
                         
 
                             <a
@@ -120,6 +120,24 @@ const Procedure = () => {
                         </div>
                     </div>
                 </div>
+            </section>
+
+
+
+            <section className='' data-aos="flip-down" data-aos-duration="1500">
+                <h1 className='text-gray-500 text-center text-5xl italic font-semibold  mt-5 mb-5'>SELECT THE EVENT(S) YOU WILL BE ATTENDING</h1>
+
+                <div className='grid lg:grid-cols-3 gap-5 justify-around max-w-6xl  mb-5 mx-auto mt-12 text-xl'>              
+                    <h1 className='text-2xl mb-5 bg-pink-100 p-5 text-center rounded-xl font-bold'>Wedding Ceremony - (at 10.08.2015)</h1>
+                    <h1 className='text-2xl font-bold bg-pink-100 p-5 text-center rounded-xl'>Church Ceremony - (at 11.08.2015)</h1>                   
+                    <h1 className='text-2xl font-bold bg-pink-100 p-5 text-center rounded-xl'>Ring Ceremony - (at 12.08.2015)</h1>
+                   <h1 className='text-2xl font-bold bg-pink-100 p-5 text-center rounded-xl'>Exchanging of Vows - (at 13.08.2015)</h1>
+                  <h1 className='text-2xl font-bold bg-pink-100 p-5 text-center rounded-xl'>Bridal Shower - (at 14.08.2015)</h1>
+                  <h1 className='text-2xl font-bold bg-pink-100 p-5 text-center rounded-xl'>After Brunch - (at 15.08.2015)</h1>
+                 
+
+                </div>
+
             </section>
 
         

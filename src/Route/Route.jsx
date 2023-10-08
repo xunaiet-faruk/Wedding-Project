@@ -8,14 +8,15 @@ import Contact from '../Pages/Contact/Contact';
 import Singledetails from '../Pages/Singlecard/Singledetails';
 import Private from '../Private/Private';
 import Procedure from '../Pages/procedure/procedure';
-import Allcards from '../Pages/Allcards/Allcards';
 import Speacial from '../Pages/Speacila/Speacial';
+import Error from '../Error/Error';
 
 
 const Route=createBrowserRouter([
     {
         path:'/',
         element:<Mainroute></Mainroute>,
+        errorElement:<Error></Error>,
         children:[
             {
                 path:'/',
@@ -37,7 +38,7 @@ const Route=createBrowserRouter([
           },
           {
             path:'/procedure',
-            element:<Procedure></Procedure>
+            element: <Private><Procedure></Procedure></Private>
           },
           {
             path:'/contact',

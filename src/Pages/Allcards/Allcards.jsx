@@ -15,7 +15,7 @@ const Allcards = ({card}) => {
         
         <div>
           
-            <div className="relative flex w-[400px] h-[600px] mt-5 flex-col rounded-xl bg-pink-50 shadow-xl bg-clip-border text-gray-700 ">
+            <div className="relative flex w-[400px] h-[600px] mt-5 flex-col rounded-xl bg-pink-50 shadow-xl bg-clip-border text-gray-700 " data-aos="fade-down-right" data-aos-duration="3000">
                 <div className="relative mx-4 mt-4 h-96 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
                     <img 
                         src={image}

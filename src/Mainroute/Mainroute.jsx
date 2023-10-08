@@ -4,7 +4,7 @@ import Navbar from "../Navbar/Navbar";
 
 const Mainroute = () => {
     return (
-        <div>
+        <div> 
             <div className="bg-pink-50">
                 <Navbar></Navbar>
 

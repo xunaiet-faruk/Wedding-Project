@@ -1,26 +1,47 @@
-import {MdLogout, MdSupervisorAccount } from 'react-icons/md';
-import { GiSelfLove } from 'react-icons/gi';
+// import { BiPhoneCall, BiSolidLocationPlus } from 'react-icons/bi';
+// import { AiOutlineMail } from 'react-icons/ai';
+import { FiPhoneCall } from 'react-icons/fi';
+import { SlLocationPin } from "react-icons/sl";
+import { HiOutlineMail } from "react-icons/hi";
 
 const Contact = () => {
     return (
-        <div>
-            <div className='flex justify-evenly'>
-                 <div className='mt-5 p-10'>
-               
-                    <p className='text-2xl border-2 px-32 py-3 round-t-md text-black flex gap-4'><MdSupervisorAccount className='text-3xl'></MdSupervisorAccount> Acoount</p>
-                    <p className='text-2xl border-x-2 px-32 py-3 text-black flex gap-4'><GiSelfLove></GiSelfLove>Favorites</p>
-                    <p className='text-2xl border-2 rounded-b-md px-32  py-3 mb-12 flex gap-4 text-black'><MdLogout></MdLogout> Logout</p>
-                 </div>
+    <>        
+    
+    <h1 className='text-3xl font-bold italic mt-5 text-center'>Contact All Us</h1>
+    
+       
 
-                 <div className='p-10 mt-3'>
-                            <h1 className='text-red-400 text-3xl'>User Information</h1>
-                            <p>Email :</p>
-                            <p>Name :</p>
-                            <p>Verified :</p>
-                            <p>Register :</p>
-                 </div>
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 text-center my-16 p-8 container mx-auto' data-aos="zoom-out-up" data-aos-duration="3000">
+                <div className='bg-[#ABCE4E] p-20 rounded-lg space-y-4'>
+                    <div className='bg-white p-3 rounded-full w-[40px] mx-auto'>
+                        <SlLocationPin></SlLocationPin>
+                    </div>
+                    <h1 className='text-3xl text-white font-semibold'>Location</h1>
+                    <p className='text-white font-poppins'>Swamibagh Road No 28</p>
+                    <p className='font-poppins text-white'>Dhaka - Bangladesh</p>
+                </div>
+                <div className='bg-[#F55D52] p-20 rounded-lg space-y-4'>
+                    <div className='bg-white p-3 rounded-full w-[40px] mx-auto'>
+                        <FiPhoneCall></FiPhoneCall>
+                    </div>
+                    <h1 className='text-3xl text-white font-semibold'>Call Us</h1>
+                    <p className='text-white font-poppins'>Phone : 01719991111</p>
+                    <p className='font-poppins text-white'>Fax: +6221.2002.2013</p>
+                </div>
+                <div className='bg-[#5B9ACF] p-20 rounded-lg space-y-4'>
+                    <div className='bg-white p-3 rounded-full w-[40px] mx-auto'>
+                        <HiOutlineMail></HiOutlineMail>
+                    </div>
+                    <h1 className='text-3xl text-white font-semibold'>Email Us</h1>
+                    <p className='text-white font-poppins'>dreameve@gmail.com</p>
+                    <p className='font-poppins text-white'>eventorganizer@gmail.com</p>
+                </div>
             </div>
-        </div>
+        
+
+        </>
+
     );
 };
 

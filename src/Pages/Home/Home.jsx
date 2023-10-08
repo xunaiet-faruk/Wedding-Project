@@ -23,9 +23,9 @@ const Home = () => {
             <div>
                 <Banner></Banner>
             </div>
-            <h1 className="text-5xl font-bold mt-5  mb-4 text-cebter italic text-transparent  bg-clip-text bg-gradient-to-b from-yellow-400 f to-pink-500  text-center">OUR SERVISES </h1>
+            <h1 className="text-5xl font-bold mt-8 text-cebter italic text-transparent  bg-clip-text bg-gradient-to-b from-yellow-400 f to-pink-500 mb-8  text-center">OUR SERVICES </h1>
 
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 max-w-7xl mx-auto" >
                 {
                     cards.map(card => <Allcards key={card.id} card={card}></Allcards>)
                 }
