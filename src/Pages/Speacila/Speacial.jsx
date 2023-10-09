@@ -3,13 +3,13 @@
 const Speacial = () => {
     return (
         <div>
-            <div className='text-center ' data-aos="flip-left" data-aos-duration="3000">
+            <div className='text-center' data-aos="flip-left" data-aos-duration="3000">
                 <h1 className='text-5xl mb-8 text-center mt-8 font-semibold italic text-pink-400'>Cutting Costs, Never <span className='text-black'>Cuality</span></h1>
                 <p className='text-2xl hover:text-black font-semibold text-gray-400 italic text-center'>Looking for the perfect wedding offer? Well we have some fantastic wedding offers just for <br />  you.From complimentary bedrooms to <span className='text-red-500 font-bold'>50%</span> off additional evening guests to really get the <br />  party started! With a range of offers for weddings,  take a peek below and contact our award <br />-winning team to discuss the right wedding offer for you.</p>
 
             </div>
 
-            <div className='grid lg:grid-cols-2 md:grid-cols-1 md:ml-16 lg:ml-60 my-10  gap-16 max-w-7xl mx-auto'>
+            <div className='grid lg:grid-cols-2 md:grid-cols-1 md:ml-16 lg:ml-40 my-10   gap-16 max-w-7xl mx-auto'>
 
                 <div className='' data-aos="fade-up" data-aos-duration="1000">
                     <div className="hero min-h-screen ml-3 md:ml-0 md:w-[600px] w-[400px] lg:w-[650px]" style={{ backgroundImage: 'url(https://i.ibb.co/d5GBMjK/crr1.jpg)' }}>
