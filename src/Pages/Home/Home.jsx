@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Banner from "../../Component/Banner/Banner";
-import Navbar from "../../Navbar/Navbar";
 import { useLoaderData } from "react-router-dom";
 import Allcards from "../Allcards/Allcards";
 import Aboutus from "../../Aboutus/Aboutus";

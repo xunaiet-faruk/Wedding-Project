@@ -1,8 +1,8 @@
-# React + Vite
+1 . My Projeact live side project  name : => 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1 . Quality:
+ 
+a. The wedding will be planned according to all specifications of the Bride andGroom.b.
+ 
+b. All deliverables stated shall be inspected by the Bride and Groom before they aresecured for the ceremony or reception

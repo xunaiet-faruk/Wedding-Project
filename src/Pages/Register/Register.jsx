@@ -1,15 +1,16 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Authcontext } from "../../Configcontext/Context";
-import Navbar from "../../Navbar/Navbar";
 import { updateProfile } from "firebase/auth";
 import { FcGoogle } from "react-icons/fc";
+import Swal from "sweetalert2";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
 
 
 const Register = () => {
     const [error, seterror] = useState('')
-    const [succes, setsuccess] = useState('');
+    const [see, setsee] = useState(false);
     const { createuser, Googlesign } = useContext(Authcontext)
     const navigate = useNavigate()
     const handlesubmit = e => {
@@ -17,8 +18,8 @@ const Register = () => {
         const image = e.target.image.value
         const email = e.target.email.value
         const password = e.target.password.value;
-        const checked = e.target.checked.value;
-        console.log(name, email, password, checked)
+        
+        console.log(name, email, password)
         e.preventDefault()
         seterror('')
         if (password.length < 6) {
@@ -30,23 +31,30 @@ const Register = () => {
             return;
 
         } else if (!/[!@#$%^&*]/.test(password)) {
-            seterror('password must be 1 caracter speacial')
+             seterror('password must be 1 caracter speacial')
+             return;
         }
         createuser(email, password)
             .then(res => {
-                setsuccess('Your successfully Registerd')
-                updateProfile(res.user,{
-                    displayName:name,
-                    photoURL:image,
+
+
+                updateProfile(res.user, {
+                    displayName: name,
+                    photoURL: image,
 
                 })
-                .then(()=>{
-                    console.log('NIce')
-                    
+                    .then(() => {
+                        Swal.fire({
+                            icon: 'success',
+                            text: 'Successfully login!',
+
+                        })
+                            .catch(error => {
+                                console.log(error)
+                            })
+                
                 })
-                .catch(error =>{
-                    console.log(error)
-                })
+                
                 console.log(res.user)
             })
             .catch(error => {
@@ -78,13 +86,13 @@ const Register = () => {
         <>
 
           
-            <div className="hero min-h-screen ">
+            <div className="hero min-h-screen " >
 
                 <div className="hero-content flex-col ">
                     <div className="text-center ">
                         <h1 className="text-5xl font-bold">Register now!</h1>
                     </div>
-                    <div className="card flex-shrink-0 w-[800px] p-5 shadow-2xl bg-gray-300">
+                    <div className="card flex-shrink-0 w-[380px] lg:w-[800px] p-5 shadow-2xl bg-gray-300">
                         <form onSubmit={handlesubmit}>
 
                             <div className="form-control">
@@ -109,11 +117,9 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text font-bold">Password</span>
                                 </label>
-                                <input type="password" placeholder="password" name="password" className="input input-bordered" required />
-                                <div className="mt-3 mb-3">
-                                    <input type="checkbox" className="mr-3 " name="checked" id="task" />
-                                    <label className="text-md" htmlFor="task">Please Accept our terms</label>
-                                </div>
+                                <input type={see ? "text" : "password"} placeholder="password" name="password" className="input input-bordered" required />
+                                <h5 className="absolute left-[330px] lg:left-[760px]  mt-14" onClick={() => setsee(!see)}>{see ? <AiFillEye></AiFillEye> : <AiFillEyeInvisible></AiFillEyeInvisible>}</h5>
+
                             </div>
                             <div className="form-control mt-3">
                                 <button className="btn btn-secondary">Register</button>
@@ -129,11 +135,7 @@ const Register = () => {
                                 error && <p>{error.message}</p>
                             }
                         </div>
-                        <p className="text-center mt-4">
-                            {
-                                succes && <span className="text-green-600 text-bold ">{succes}</span>
-                            }
-                        </p>
+                      
 
                         <div className="text-center">
                             <button onClick={handlegoogle} className="btn boreder ml-3 text-md hover:bg-error mt-4 font-semibold">

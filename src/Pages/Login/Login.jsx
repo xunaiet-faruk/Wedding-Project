@@ -5,9 +5,9 @@ import { FcGoogle } from 'react-icons/fc';
 import Swal from "sweetalert2";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 const Login = () => {
- 
+
     const [passwrong, setpasswrong] = useState('');
-    const [see, setsee] =useState(false);
+    const [see, setsee] = useState(false);
     const { signin, Googlesign } = useContext(Authcontext);
 
     const location = useLocation();
@@ -17,16 +17,16 @@ const Login = () => {
         e.preventDefault()
         const email = e.target.email.value
         const password = e.target.password.value;
-       
-        console.log(name, email, password)
+
+        console.log( email, password)
 
         signin(email, password)
             .then(res => {
-                
+
                 Swal.fire({
                     icon: 'success',
                     text: 'Successfully login!',
-                 
+
                 })
 
 
@@ -65,7 +65,7 @@ const Login = () => {
                     <div className="text-center ">
                         <h1 className="text-5xl font-bold">Login now!</h1>
                     </div>
-                    <div className="card flex-shrink-0 w-[800px] p-5 shadow-2xl bg-blue-100">
+                    <div className="card flex-shrink-0 w-[380px] lg:w-[800px] p-5 shadow-2xl bg-blue-100">
                         <form onSubmit={handlelogin}>
                             <div className="form-control">
                                 <label className="label">
@@ -78,7 +78,7 @@ const Login = () => {
                                     <span className="label-text">Password</span>
                                 </label>
                                 <input className="relative" type={see ? "text" : "password"} placeholder="password" name="password" className="input input-bordered" required />
-                                <h5 className="absolute  left-[760px]  mt-14" onClick={() => setsee(!see)}>{see ? <AiFillEye></AiFillEye> : <AiFillEyeInvisible></AiFillEyeInvisible>}</h5>
+                                <h5 className="absolute left-[340px] lg:left-[760px]  mt-14" onClick={() => setsee(!see)}>{see ? <AiFillEye></AiFillEye> : <AiFillEyeInvisible></AiFillEyeInvisible>}</h5>
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>
@@ -87,7 +87,7 @@ const Login = () => {
                         <p className="text-center mt-2">If you are new please
                             <Link className="text-green-500" to='/register'> Register</Link>
                         </p>
-                   
+
                         <p className="text-center">
                             {
                                 passwrong && <span className=" text-red-400">{passwrong}</span>

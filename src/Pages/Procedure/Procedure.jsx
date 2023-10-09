@@ -5,13 +5,13 @@ const Procedure = () => {
     return (
        <div>
 
-            <section className='' data-aos="zoom-out-left">
-                <div className="max-w-screen-xl mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+            <section className='' >
+                <div className="max-w-screen-xl mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16" data-aos="flip-left">
                     <div
                         className="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-16"
                     >
                         <div
-                            className="mx-auto max-w-lg text-center lg:mx-0 ltr:lg:text-left rtl:lg:text-right"
+                            className="mx-auto  max-w-lg text-center lg:mx-0 ltr:lg:text-left rtl:lg:text-right"
                         >
                             <h2 className="text-3xl font-bold sm:text-4xl"> BROWSE MATRIMONIAL
                                 PROFILES</h2>
@@ -19,13 +19,13 @@ const Procedure = () => {
 
                             <a
                                 href="#"
-                                className="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+                                className="mt-8 hover:bg-gray-400 hover:text-black inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition  focus:outline-none focus:ring focus:ring-yellow-400"
                             >
                                 Get Started Today
                             </a>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+                        <div className="grid grid-cols-2  gap-4 sm:grid-cols-3">
                             <a
                                 className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
                                 href="/accountant"
@@ -124,8 +124,7 @@ const Procedure = () => {
 
 
 
-            <section className='' data-aos="flip-down" data-aos-duration="1500">
-                <h1 className='text-gray-500 text-center text-5xl italic font-semibold  mt-5 mb-5'>SELECT THE EVENT(S) YOU WILL BE ATTENDING</h1>
+            <section className='bg-gray-200  mr-2 p-6 lg:p-10' data-aos="flip-left" >
 
                 <div className='grid lg:grid-cols-3 gap-5 justify-around max-w-6xl  mb-5 mx-auto mt-12 text-xl'>              
                     <h1 className='text-2xl mb-5 bg-pink-100 p-5 text-center rounded-xl font-bold'>Wedding Ceremony - (at 10.08.2015)</h1>

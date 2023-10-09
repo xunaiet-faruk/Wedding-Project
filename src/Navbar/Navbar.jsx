@@ -18,7 +18,7 @@ const handleclick = () =>{
 }
 
 
-    const links = <div className="flex gap-6 items-center">
+    const links = <div className="flex   gap-6 items-center">
 
      
             <NavLink
@@ -81,25 +81,25 @@ const handleclick = () =>{
 
 
     return (
-        <div className="navbar max-w-screen-2xl mx-auto  pt-5 ">
+        <div className="navbar  pt-5 ">
             <div className="navbar-start ">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 w-52">
                         {links}
                     </ul>
                 </div>
-                <img className="w-[100px]" src={"https://i.ibb.co/pxx4t7p/257710628-3080374558951991-1582989214067123809-n.png"} alt="" />
+                <img className="w-[100px] ml-16 " src={"https://i.ibb.co/pxx4t7p/257710628-3080374558951991-1582989214067123809-n.png"} alt="" />
 
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal px-1 ">
                     {links}
                 </ul>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end flex-col lg:flex-row md:flex-row md:gap-0 lg:gap-0 gap-3">
 
                 {
                     user && <p className="mr-2">{user.displayName}</p>
@@ -115,7 +115,7 @@ const handleclick = () =>{
                         :
 
                         <Link to='/login'>
-                        <button className="btn bg-blue-200 font-bold px-8">Login</button>
+                        <button className="btn ml-5 bg-blue-200 font-bold px-8">Login</button>
                         </Link>
 
 
