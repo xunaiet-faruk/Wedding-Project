@@ -6,7 +6,9 @@ const Success = () => {
             <h1 className='text-center text-4xl lg:text-5xl  mt-8 mb-16  font-bold italic text-black'>Matrimony Service with <span className="text-red-400">Millions of Success</span> Stories</h1>
             <div className="mb-16">
 
-                <div className="carousel w-full" >
+                <div className="carousel w-full" data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500">
                     <div id="slide1" className="carousel-item relative w-full flex flex-col lg:flex-row gap-32 justify-center  items-center">
 
                         <div className='bg-gray-100 shadow-xl   p-8 rounded-lg '>

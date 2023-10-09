@@ -44,9 +44,11 @@ const Register = () => {
 
                 })
                     .then(() => {
+                        window.location.reload()
                         Swal.fire({
                             icon: 'success',
-                            text: 'Successfully login!',
+                            text: 'Successfully login!'
+                            
 
                         })
                             .catch(error => {

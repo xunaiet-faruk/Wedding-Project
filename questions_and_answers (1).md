@@ -18,9 +18,10 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: A?
+#### Answer: B : `ReferenceError: greetign is not defined`
 
-<i>Write your explanation here</i>
+<i>
+In the code, you declared a variable named greeting but then attempted to assign an empty object {} to a variable called greetign (note the typo in the variable name). JavaScript is case-sensitive, so greetign and greeting are considered two different variables. Since you never declared greetign, you will get a ReferenceError when you try to use it.</i>
 
 </p>
 </details>
@@ -43,9 +44,10 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C : `"12"`
 
-<i>Write your explanation here</i>
+<i>
+In the provided code, the sum function takes two parameters a and b and returns their sum. However, when you call the sum function, you are passing the number 1 and the string "2" as arguments:</i>
 
 </p>
 </details>
@@ -69,9 +71,9 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A: `['🍕', '🍫', '🥑', '🍔']`
 
-<i>Write your explanation here</i>
+<i>Since you didn't perform any operations on the food array itself, it remains unchanged throughout the code. Therefore, when you log food to the console, it still contains its original elements:</i>
 
 </p>
 </details>
@@ -94,9 +96,10 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B : `Hi there, undefine`
 
-<i>Write your explanation here</i>
+<i>
+The provided code defines a JavaScript function called sayHi that takes a parameter name and returns a string greeting that includes the provided name. For example, if you call the function with the argument "Xunaiet", it would return the string "Hi there, Xunaiet".</i>
 
 </p>
 </details>
@@ -122,9 +125,10 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C : 3
 
-<i>Write your explanation here</i>
+<i>Inside the callback function provided to forEach, you have the num parameter, which represents the current element being iterated.
+Now, let's break down what happens in each iteration of the forEach loop:</i>
 
 </p>
 </details>

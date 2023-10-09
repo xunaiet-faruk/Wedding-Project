@@ -10,7 +10,7 @@ const Contact = () => {
             <section>
 
 
-                <div className='grid grid-cols-1   lg:grid-cols-3 gap-6 text-center my-16 p-8 container mx-auto' data-aos="flip-left">
+                <div className='grid grid-cols-1   lg:grid-cols-3 gap-6 text-center my-16 p-8 container mx-auto overflow-x-hidden' data-aos="flip-left" >
                     <div className=' p-20 rounded-lg bg-pink-100  space-y-4'>
                         <div className=' p-3  rounded-full w-[40px] mx-auto'>
                             <SlLocationPin></SlLocationPin>
@@ -38,7 +38,7 @@ const Contact = () => {
                 </div>
 
 
-                <div className="mx-auto  max-w-screen-xl pl-8 lg:ml-[520px] px-4  py-16 sm:px-7 lg:px-8" data-aos="flip-left">
+                <div className="mx-auto  max-w-screen-xl pl-8 lg:ml-[520px] px-4  py-16 sm:px-7 lg:px-8 overflow-x-hidden" data-aos="flip-left" data-aos-duration="3000">
                     <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
                         <div className="rounded-lg flex bg-gray-100  p-8 shadow-lg lg:col-span-3 lg:p-12">
                             <form action="" className="space-y-4">
