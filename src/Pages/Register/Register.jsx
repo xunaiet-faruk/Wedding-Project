@@ -36,8 +36,6 @@ const Register = () => {
         }
         createuser(email, password)
             .then(res => {
-
-
                 updateProfile(res.user, {
                     displayName: name,
                     photoURL: image,
@@ -48,13 +46,10 @@ const Register = () => {
                         Swal.fire({
                             icon: 'success',
                             text: 'Successfully login!'
-                            
-
                         })
                             .catch(error => {
                                 console.log(error)
                             })
-                
                 })
                 
                 console.log(res.user)
@@ -62,9 +57,6 @@ const Register = () => {
             .catch(error => {
                 console.log(error)
             })
-
-            
-
 
     }
 

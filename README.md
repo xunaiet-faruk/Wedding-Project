@@ -1,4 +1,4 @@
-1 . My Projeact live side project  name : => 
+1 . My Projeact live side project   : => https://wedding-related-projeact.web.app
 
  ..... My projeact 5 feauters
 1.It is a event mangament project where it work as a wedding agencey that work wedding management system 

@@ -1,10 +1,24 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Authcontext } from "../Configcontext/Context";
-
-
-
 const Navbar = () => {
+    const [theme, setTheme] = useState(
+        localStorage.getItem("theme") ? localStorage.getItem("theme") : "light",
+    );
+
+    const handletoggle = (e) => {
+        if (e.target.checked) {
+            setTheme("dark");
+        } else {
+            setTheme("light");
+        }
+    };
+
+    useEffect(() => {
+        localStorage.setItem("theme", theme);
+        const localTheme = localStorage.getItem("theme");
+        document.querySelector("html").setAttribute("data-theme", localTheme);
+    }, [theme]);
     const { user, logout } = useContext(Authcontext)
 
 const handleclick = () =>{
@@ -87,7 +101,7 @@ const handleclick = () =>{
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 w-52">
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content  z-[1] p-2 w-52">
                         {links}
                     </ul>
                 </div>
@@ -106,12 +120,9 @@ const handleclick = () =>{
                 }
                 {
 
-                    user ?
-                       
-                          
+                    user ? 
                             <button onClick={handleclick} className="btn bg-blue-200 font-bold px-8">Sign out</button>
-                     
-
+ 
                         :
 
                         <Link to='/login'>
